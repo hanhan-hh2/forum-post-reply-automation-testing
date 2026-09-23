@@ -1,3 +1,20 @@
+# Forum Post/Reply Feature — Automation Testing
+
+Automated test suite for the "Post/Reply in Forum" feature, built as part of a 
+5-member software testing team project. Covers functional testing across two 
+complexity levels and non-functional (security) testing, using a data-driven 
+approach with Selenium WebDriver.
+
+## What this covers
+- **Level 1**: Data-driven functional tests using CSV test data
+- **Level 2**: Data-driven tests with configurable Action URL and credentials 
+  via `config.ini`, covering more complex scenarios
+- **Non-functional**: Security testing (e.g. input validation, unauthorized 
+  access attempts)
+
+## Tech stack
+Python, Selenium WebDriver, webdriver-manager
+
 # Submit Assignment Automation Test
 
 ## Requirements
