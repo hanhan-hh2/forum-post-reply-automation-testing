@@ -1,0 +1,26 @@
+TC_ID,TC_Name,File_Size_KB,File_Type,Has_File,Comment,Expected_Result,Expected_Message,Technique,Action
+TC-003-001,Submit valid PDF file,500,.pdf,yes,,PASS,Submitted for grading,ECP,add
+TC-003-002,Submit non-PDF file (.doc),500,.doc,yes,,FAIL,This file type is not allowed,ECP,add
+TC-003-003,Submit non-PDF file (.jpg),500,.jpg,yes,,FAIL,This file type is not allowed,ECP,add
+TC-003-004,Submit without uploading file,0,,no,,FAIL,You have not submitted anything yet,ECP,add
+TC-003-005,Submit without comment,500,.pdf,yes,,PASS,Submitted for grading,ECP,add
+TC-003-006,Submit with optional comment,500,.pdf,yes,This is my submission comment,PASS,Submitted for grading,ECP,add
+TC-003-007,Submit file 0KB (empty file),0,.pdf,yes,,FAIL,You have not submitted anything yet,BVA,add
+TC-003-008,Submit file 1KB (min valid),1,.pdf,yes,,PASS,Submitted for grading,BVA,add
+TC-003-009,Submit file 1023KB (just below max),1023,.pdf,yes,,PASS,Submitted for grading,BVA,add
+TC-003-010,Submit file 1024KB (at max),1024,.pdf,yes,,PASS,Submitted for grading,BVA,add
+TC-003-011,Submit file 1025KB (just above max),1025,.pdf,yes,,FAIL,File is too large,BVA,add
+TC-003-012,Submit before deadline,500,.pdf,yes,,PASS,Submitted for grading,BVA,add
+TC-003-013,Submit after deadline,500,.pdf,yes,,PASS,Submitted for grading,BVA,add
+TC-003-014,Submit PDF valid size before deadline,500,.pdf,yes,,PASS,Submitted for grading,Decision Table,add
+TC-003-015,Submit no file (Decision Table),0,,no,,FAIL,You have not submitted anything yet,Decision Table,add
+TC-003-016,Submit non-PDF file (Decision Table),500,.docx,yes,,FAIL,This file type is not allowed,Decision Table,add
+TC-003-017,Submit file > 1024KB (Decision Table),1025,.pdf,yes,,FAIL,File is too large,Decision Table,add
+TC-003-018,Submit valid PDF after deadline,500,.pdf,yes,,PASS,Submitted for grading,Decision Table,add
+TC-003-019,Main flow Add submission successfully,500,.pdf,yes,Optional comment here,PASS,Submitted for grading,Use-case,add
+TC-003-020,Submit before deadline,500,.pdf,yes,,PASS,Submitted for grading,Use-case,add
+TC-003-021,Submit after deadline,500,.pdf,yes,,PASS,Submitted for grading,Use-case,add
+TC-003-022,Submit no file,,,no,,FAIL,You have not submitted anything yet,Use-case,add
+TC-003-023,Submit non-PDF file (.doc),500,.doc,yes,,FAIL,This file type is not allowed,Use-case,add
+TC-003-024,Submit non-PDF file (.jpg),500,.jpg,yes,,FAIL,This file type is not allowed,Use-case,add
+TC-003-025,Alt flow Remove submission confirmed,500,.pdf,yes,,PASS,No submissions have been made yet,Use-case,remove
